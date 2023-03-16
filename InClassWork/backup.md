@@ -1,6 +1,6 @@
-# Backups - In Class Work
+# Backups - In Class Work / CEG 2410
 
-### Cody Southworth 
+### Name: Cody Southworth 
 
 ## Your data & backups
 - Personal:
