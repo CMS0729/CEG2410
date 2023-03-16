@@ -1,27 +1,20 @@
 # Project 2 - DIY NAS
 
-## Objectives
-
-- Create a shareable folder
-- Install `nfs` for servers and export your shareable folder
-- Install `nfs` for clients and mount your shared folder
-- Modify firewall rules to restrict access to `nfs` ports
-- (Extra Credit) WSL2 + Ubuntu as an NFS client
-
-## What you need
-
-- An instance on AWS
-- Your GitHub repo for project documentation
-    - Name your documentation `NFS.md`
+### Name: Cody Southworth
 
 ## Part 1 - NFS Server Configuration
 
 1. Configure a space, use the `ext4` filesystem
-    - For those who did the RAID exercise, you can use your RAID
-    - For those who did not, you can create a RAID or make a partition on `/dev/sdb`
-    - Document the commands used and what they do
+    - Commands used:
+        - "sudo sgdisk -n 1:0:0 /dev/xvdf" and "sudo sgdisk -n 1:0:0 /dev/sda"
+        - sudo mdadm --create --verbose /dev/md0 --level=0 --raid-devices=2 /dev/xvd[f-g]1
+        - sudo mdadm --detail /dev/md0
+        - sudo mdadm --detail --scan --verbose | sudo tee -a /etc/mdadm/mdadm.conf
+        - sudo mkfs.ext4 -m 0 -E lazy_itable_init=0,lazy_journal_init=0 /dev/md0
+        - 
 2. `mount` the partition to a folder on your AWS instance.  Allow `other`s to add files / folder and edit files / folders within the folder.
-    - Document the commands used and what they do
+    - Commands used:
+        - 
 3. Configure `/etc/fstab` to auto mount the partition to the folder on boot.
     - Line added to `/etc/fstab`
     - Command to test `/etc/fstab`
@@ -88,14 +81,3 @@ Why is this extra credit?  WSL2 + Ubuntu can work as an NFS client, but it invol
 
 - [SuperUser - rpc-statd is not running](https://superuser.com/questions/657071/mount-nfs-rpc-statd-is-not-running-but-is-required-for-remote-locking)
 - [SuperUser - how to mount NFS in WSL2?](https://superuser.com/questions/1667722/how-to-mount-an-nfs-share-on-wsl2)
-
-If you have a Mac, I'm curious what you would need to do to set up the `nfs` client and mount it to your system. 
-
-## Submission
-
-- In the Pilot Dropbox, paste the URL to the your `NFS.md` documentation in your GitHub repo
-  - URL should look like: https://github.com/WSU-kduncan/ceg2410-projects-YOURGITHUBUSERNAME/tree/main/NFS.md
-
-## Rubric
-
-[Rubric.md](Rubric.md)
