@@ -45,7 +45,8 @@
 
 ## Part 2 - Firewall Fixes
 
-Screenshot your updated Inbound rules and include it with your documentation
+1. Screenshot:
+    - ![My Image](Screenshots/InboundRules.png)
 
 ## Part 3 - Mounting an NFS Share
 
