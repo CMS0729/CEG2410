@@ -42,7 +42,6 @@
     - ![My Image](Screenshots/BlockDevices.png)
     - ![My Image](Screenshots/PermissionsShareableFolder.png)
     - ![My Image](Screenshots/FoldersShared.png)
-Screenshot your block devices (`lsblk`), the permissions of your shareable folder, and what folders are currently shared (`exportfs`)
 
 ## Part 2 - Firewall Fixes
 
