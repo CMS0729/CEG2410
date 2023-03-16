@@ -32,7 +32,10 @@
 5. Configure `/etc/exports` to share folder
     - Line added to `/etc/exports`:
         - "/mnt/NFS Server" 52.5.187.202(rw,sync,no_subtree_check)
-    - Describe the options you used in exports and why.  If you used no options, describe all default options that would apply.
+    - Reasoning for options:
+        - "rw" I choose this option because it allows both read and write requests on this NFS volume. The default is to disallow any request which changes the filesystem..
+        - "sync" This option means that all changes to the according filesystem are immediately flushed to disk.
+        - "no_subtree_checking" This option disables subtree checking, which has mild security implications, but can improve reliability.
 6. Enable your `nfs` share
     - Command to export all directories in `/etc/exports`:
         - exportfs -a 
