@@ -43,31 +43,9 @@ Screenshot your block devices (`lsblk`), the permissions of your shareable folde
 
 ## Part 2 - Firewall Fixes
 
-Go to the Learner Lab page, make sure "Start Lab" turned things on, then click the AWS link.  Now go to EC2 -> Security Groups.  You'll see one labeled something like: `ceg2350-Lab1SecurityGroup`
-
-If you set `ufw` rules or `iptables` on your instance, I recommend disabling them (`ufw`) or flushing them (`iptables`).  If you would rather keep using them, I'm good with that.
-
-Outbound rules: 
-- leave outbound rules as default ALLOW
-- some of you messed with them in project 1.  This is a reminder to undo that ;)
-
-Inbound rules:
-- ALLOW `https` from any IPv4 address (can add IPv6)
-- ALLOW `http` from any IPv4 address (can add IPv6)
-- ALLOW `ssh` from "home" - public IP from ISP
-- ALLOW `ssh` from WSU - 130.108.0.0/16
-- ALLOW `ssh` within virtual network - 10.0.0.0/16
-- ALLOW `nfs` from "home" - public IP from ISP
-- ALLOW `nfs` from WSU - 130.108.0.0/16
-- ALLOW `nfs` within virtual network - 10.0.0.0/16
-
 Screenshot your updated Inbound rules and include it with your documentation
 
 ## Part 3 - Mounting an NFS Share
-
-Linux and Mac can mount using NFS.  WSL2 can work, but is being a butt about it.  To make less of a headache, we will use our same AWS instance as a client.
-
-For this portion, mount your share folder to the client.
 
 1. Install NFS client
 2. Create a directory to mount the NFS share to
@@ -76,13 +54,6 @@ For this portion, mount your share folder to the client.
 5. Document how to `unmount` the `nfs` share
 
 Screenshot what is currently mounted by `nfs` clients using `nfsstat` and include it with your documentation.
-
-## Recommended Resources
-
-- [Ubuntu Server Docs - NFS](https://ubuntu.com/server/docs/service-nfs)
-- [Digital Ocean - Set up an NFS mount](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-20-04)
-- [RedHat - `/etc/exports` & `exportfs`](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/deployment_guide/s1-nfs-server-config-exports) 
-- [Geek Diary - Understanding the `/etc/exports` file](https://www.thegeekdiary.com/understanding-the-etc-exports-file/)
 
 ## Extra Credit - WSL2 or Mac as a client (15%)
 
