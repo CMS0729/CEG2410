@@ -14,19 +14,30 @@
         - 
 2. `mount` the partition to a folder on your AWS instance.  Allow `other`s to add files / folder and edit files / folders within the folder.
     - Commands used:
-        - 
+        - sudo mkdir /mnt/NFS\ Server
+        - sudo mount /dev/md0 /mnt/NFS\ Server
+        - df -h
+        - sudo blkid
+        - sudo chmod o+rw /mnt/NFS\ Server
 3. Configure `/etc/fstab` to auto mount the partition to the folder on boot.
-    - Line added to `/etc/fstab`
-    - Command to test `/etc/fstab`
+    - Line added to `/etc/fstab`:
+        - UUID="d686850e-b453-42de-afed-0f8e4ce0cef2 /mnt/NFS\ Server ext4 defaults 0 0
+    - Command to test `/etc/fstab`:
+        - mount -a
 3. Install `nfs` server 
-    - Command to install
-    - Command to check service status
+    - Command to install:
+        - sudo apt install nfs-kernel-server
+    - Command to check service status:
+        - service nfs-kernel-server status
 4. Configure `/etc/exports` to share folder
-    - Line added to `/etc/exports`
+    - Line added to `/etc/exports`:
+        - /mnt/NFS\ Server 44.214.94.251(rw,sync,no_subtree_check)
     - Describe the options you used in exports and why.  If you used no options, describe all default options that would apply.
 5. Enable your `nfs` share
-    - Command to export all directories in `/etc/exports`
-    - Command to restart `nfs`
+    - Command to export all directories in `/etc/exports`:
+        - exportfs -a 
+    - Command to restart `nfs`:
+        - sudo systemctl restart nfs-kernel-server
 
 Screenshot your block devices (`lsblk`), the permissions of your shareable folder, and what folders are currently shared (`exportfs`)
 
