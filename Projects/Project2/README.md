@@ -31,7 +31,7 @@
         - service nfs-kernel-server status
 4. Configure `/etc/exports` to share folder
     - Line added to `/etc/exports`:
-        - "/mnt/NFS Server" 44.214.94.251(rw,sync,no_subtree_check)
+        - "/mnt/NFS Server" 52.5.187.202(rw,sync,no_subtree_check)
     - Describe the options you used in exports and why.  If you used no options, describe all default options that would apply.
 5. Enable your `nfs` share
     - Command to export all directories in `/etc/exports`:
