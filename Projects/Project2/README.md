@@ -7,11 +7,11 @@
 1. Configure a space, use the `ext4` filesystem
     - Commands used:
         - "sudo sgdisk -n 1:0:0 /dev/xvdf" and "sudo sgdisk -n 1:0:0 /dev/sda"
+            - aa
         - sudo mdadm --create --verbose /dev/md0 --level=0 --raid-devices=2 /dev/xvd[f-g]1
         - sudo mdadm --detail /dev/md0
         - sudo mdadm --detail --scan --verbose | sudo tee -a /etc/mdadm/mdadm.conf
         - sudo mkfs.ext4 -m 0 -E lazy_itable_init=0,lazy_journal_init=0 /dev/md0
-        - 
 2. `mount` the partition to a folder on your AWS instance.  Allow `other`s to add files / folder and edit files / folders within the folder.
     - Commands used:
         - sudo mkdir /mnt/NFS\ Server
