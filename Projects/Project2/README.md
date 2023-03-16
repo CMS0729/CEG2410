@@ -6,12 +6,16 @@
 
 1. Configure a space, use the `ext4` filesystem
     - Commands used:
-        - "sudo sgdisk -n 1:0:0 /dev/xvdf" and "sudo sgdisk -n 1:0:0 /dev/sda"
-            - aa
+        - "sudo sgdisk -n 1:0:0 /dev/xvdf" and "sudo sgdisk -n 1:0:0 /dev/xvdg"
+            - The purpose of this command is to partition the disks. 
         - sudo mdadm --create --verbose /dev/md0 --level=0 --raid-devices=2 /dev/xvd[f-g]1
+            - The purpose of this command is to create a RAID0 array. 
         - sudo mdadm --detail /dev/md0
+            - The purpose of this command is to bring up a prompt that esnures the array is working. If it is we should see "State: clean". 
         - sudo mdadm --detail --scan --verbose | sudo tee -a /etc/mdadm/mdadm.conf
+            - This is to esnure the array will persist after reboot. 
         - sudo mkfs.ext4 -m 0 -E lazy_itable_init=0,lazy_journal_init=0 /dev/md0
+            - This command will format the array.
 2. `mount` the partition to a folder on your AWS instance.  Allow `other`s to add files / folder and edit files / folders within the folder.
     - Commands used:
         - sudo mkdir /mnt/NFS\ Server
