@@ -38,7 +38,7 @@
         - exportfs -a 
     - Command to restart `nfs`:
         - sudo systemctl restart nfs-kernel-server
-7.) Screenshots:
+7. Screenshots:
     - ![My Image](Screenshots/BlockDevices.png)
     - ![My Image](Screenshots/PermissionsShareableFolder.png)
     - ![My Image](Screenshots/FoldersShared.png)
