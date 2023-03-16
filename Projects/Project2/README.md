@@ -50,13 +50,12 @@
 
 ## Part 3 - Mounting an NFS Share
 
-1. Install NFS client
-2. Create a directory to mount the NFS share to
-3. Mount the share folder using the host's IP (public or private)
-4. Prove that you can add files to the `nfs` share
-5. Document how to `unmount` the `nfs` share
+1. How to unmount a nfs share:
+    - This is rather simple. All we need to do is figure out which nfs we would like to unmount and use the command "sudo umount /nfs/your_folder_name". 
 
-Screenshot what is currently mounted by `nfs` clients using `nfsstat` and include it with your documentation.
+2. Screenshots:
+    - ![My Image](Screenshots/ClientNFS.png)
+    - ![My Image](Screenshots/NFSMount.png)
 
 ## Extra Credit - WSL2 or Mac as a client (15%)
 
