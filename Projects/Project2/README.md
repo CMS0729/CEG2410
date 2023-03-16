@@ -24,21 +24,21 @@
         - UUID="d686850e-b453-42de-afed-0f8e4ce0cef2 /mnt/NFS\ Server ext4 defaults 0 0
     - Command to test `/etc/fstab`:
         - mount -a
-3. Install `nfs` server 
+4. Install `nfs` server 
     - Command to install:
         - sudo apt install nfs-kernel-server
     - Command to check service status:
         - service nfs-kernel-server status
-4. Configure `/etc/exports` to share folder
+5. Configure `/etc/exports` to share folder
     - Line added to `/etc/exports`:
         - "/mnt/NFS Server" 52.5.187.202(rw,sync,no_subtree_check)
     - Describe the options you used in exports and why.  If you used no options, describe all default options that would apply.
-5. Enable your `nfs` share
+6. Enable your `nfs` share
     - Command to export all directories in `/etc/exports`:
         - exportfs -a 
     - Command to restart `nfs`:
         - sudo systemctl restart nfs-kernel-server
-6.) Screenshots:
+7.) Screenshots:
     - ![My Image](Screenshots/BlockDevices.png)
     - ![My Image](Screenshots/PermissionsShareableFolder.png)
     - ![My Image](Screenshots/FoldersShared.png)
