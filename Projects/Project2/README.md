@@ -38,7 +38,8 @@
         - exportfs -a 
     - Command to restart `nfs`:
         - sudo systemctl restart nfs-kernel-server
-
+6.) Screenshots
+    - ![My Image](Screenshots/Block Devices)
 Screenshot your block devices (`lsblk`), the permissions of your shareable folder, and what folders are currently shared (`exportfs`)
 
 ## Part 2 - Firewall Fixes
