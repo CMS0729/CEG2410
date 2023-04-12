@@ -29,7 +29,17 @@
 ## Setup AD DC
 
 - Configuring a Windows Server to be a Domain Controller
-  - Outline of basic steps, resource(s) used
+  - EC2:
+    - Firstly you need to launch a new Instance. You can give it a name whatever you prefer in my case I named it ```Windows Server 2019```. Next give it an Image and I choose "Windows 2019 Base". Setup your Network Settings to your active running linux instance. Next you need to setup your security group.
+    - Once that is all done we now need to give our new instance an elastic IP. Create one and name it however you choose but make sure to assoicate it with your Linux instance. Last thing we need to do is change our inbound settings. Make sure to allow RSD from your home IP and your aws instance IP. 
+   - In the Server:
+      - Our next step is to install Active Directory Domain Services or AD DS for short. To do this we need to open the Windows Powershell and in the terminal put ```Install-WindowsFeature -name AD-Domain-Services -IncludeManagementTools```. This will give you the tools to get the ball rolling.
+  - Network Settings:
+      - We now need to edit our network settings. Open powershell and enter ```ipconfig /all```. Once you are in the control panel edit your IPv4 settings and take a look at your powershell so you correctly inputting everyting. Change your public IP to the given one in the powershell, change your subnet mask to ```255.255.0.0```. Then change the DNS server to the one listed in powershell. Your machine will need to restart.
+  - Computer Name:
+    - Next we need to change the PC name. Once again back to the control panel. It is of good habit to name your first domain controller to "DC1". You will need to restart once again to apply the changes.
+  - Server Manger:
+    - 
 - Domain Name: ```Windows Server 2019```
 - Domain Controller Name: ```DC1```
 - Domain DNS IP: ```10.0.0.2```
