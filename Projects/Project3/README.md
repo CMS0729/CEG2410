@@ -39,8 +39,8 @@
   - Computer Name:
     - Next we need to change the PC name. Once again back to the control panel. It is of good habit to name your first domain controller to "DC1". You will need to restart once again to apply the changes.
   - Server Manger:
-    - 
-- Domain Name: ```Windows Server 2019```
+    - Once in the Server Manager we need to promote this server to a domain controller. Once that is done you will be prompted with a menu to setup the deployment configuration. You will want to add a new forest and give it a root domain name of your choosing.
+- Domain Name: ```ad.taiga.com```
 - Domain Controller Name: ```DC1```
 - Domain DNS IP: ```10.0.0.2```
 
