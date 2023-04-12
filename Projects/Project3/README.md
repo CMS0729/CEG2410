@@ -31,7 +31,7 @@
 - Configuring a Windows Server to be a Domain Controller
   - Outline of basic steps, resource(s) used
 - Domain Name: ```Windows Server 2019```
-- Domain Controller Name:
+- Domain Controller Name: ```DC1```
 - Domain DNS IP: ```10.0.0.2```
 
 ## AD Structure
