@@ -87,7 +87,7 @@ Find guides to create the following Group Policy Objects and specify where they 
   - [Guide](https://learn.microsoft.com/en-us/answers/questions/844495/creating-group-policy-to-prevent-users-to-run-prog)
   - Where it should be:
 - Disable Guest account login to computers in Secure OU
-  - [Guide](https://www.lepide.com/blog/top-10-most-important-group-policy-settings-for-preventing-security-breaches/#:~:text=from%20abusing%20access%3A-,In%20Group%20Policy%20Management%20Editor%20(opened%20for%20a%20custom%20GPO,checkbox%20and%20click%20%E2%80%9CDisabled%E2%80%9D.)
+  - [Guide](https://www.lepide.com/blog/top-10-most-important-group-policy-settings-for-preventing-security-breaches/#:~:text=from%20abusing%20access%3A-,In%20Group%20Policy%20Management%20Editor%20(opened%20for%20a%20custom%20GPO,checkbox%20and%20click%20%E2%80%9CDisabled%E2%80%9D)
   - Where it should be: ```taiga Computers```
 - Allow server_access to sign on to Servers
   - [Guide]()
