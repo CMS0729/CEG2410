@@ -38,7 +38,7 @@ Create the following Organizational Units - Provide screenshot proof:
   - `HR` - can log on to Secure computers, managed by hr_finance_admins group
   - `Engineers` - can log on to Workstations, managed by dev_eng_admins
   - `Developers` - can log on to Workstations, managed by dev_eng_admins
-- Screenshot: ![My Image](Screenshots/OU.png)
+- Screenshot: ![My Image](Screenshots/)
 
 **Extra Credit (5%)** Provide a scripted solution that generates these. There may be a sample `.csv` file in this folder
   * Scripted solution in repo as ```bulkcreate.ps1```
