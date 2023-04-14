@@ -62,7 +62,7 @@ Create the following Security Groups and define where they should be within the 
 - `finance_RW` - users who have Read / Write access to finance share
     - Placed within: ```"Finance" (OU2) / taiga "taiga Users" (OU1)```
 - `onboarding_R` - users who have Read access to onboarding documents
-    - Placed within: ```"Admins" (OU2) / taiga "taiga Users" (OU1)```
+    - Placed within: ```"Finance" (OU2) / taiga "taiga Users" (OU1)```
 - `server_access` - users who can log on to Servers
     - ```Placed within "taiga Servers" (OU1)```
 - `dev_eng_admins` - IT admins to handle Developer and Engineer accounts
