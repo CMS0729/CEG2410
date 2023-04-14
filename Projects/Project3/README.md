@@ -36,7 +36,7 @@ Create the following Organizational Units - Provide screenshot proof:
   - `HR` - can log on to Secure computers, managed by hr_finance_admins group
   - `Engineers` - can log on to Workstations, managed by dev_eng_admins
   - `Developers` - can log on to Workstations, managed by dev_eng_admins
-- Screenshot: *CBC*: ![My Image](Screenshot/users.png)
+- Screenshot: ![My Image](Screenshot/Users.png)
 
 **Extra Credit (5%)** Provide a scripted solution that generates these. There may be a sample `.csv` file in this folder
 
