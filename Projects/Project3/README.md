@@ -100,6 +100,8 @@ Create the following Security Groups and define where they should be within the 
 - `remote_workstation` - Group of workstations that allow RDP connections
     - ```Placed within "taiga Computers" (OU1), "Workstations" (OU2)```
 
+---
+
 ## OUs & GPOs
 
 ### Applying Group Policies
