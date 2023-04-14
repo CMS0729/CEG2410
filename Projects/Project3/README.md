@@ -52,6 +52,7 @@ Using a PowerShell script, join the users in [users.csv](users.csv) to your doma
 - Screenshot: ![My Image](Screenshots/Users.png)
 
 **Extra Credit (5%)** Provide a scripted solution to add users to the OUs given in the OU1 and OU2 column.
+  * Scripted solution in repo as ```OU-bulkcreate.ps1```
 
 ---
 
