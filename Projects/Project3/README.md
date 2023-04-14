@@ -20,6 +20,8 @@
 - Domain Controller Name: ```DC1```
 - Domain DNS IP: ```10.0.0.2```
 
+---
+
 ## AD Structure
 
 ### Create OUs
@@ -36,27 +38,31 @@ Create the following Organizational Units - Provide screenshot proof:
   - `HR` - can log on to Secure computers, managed by hr_finance_admins group
   - `Engineers` - can log on to Workstations, managed by dev_eng_admins
   - `Developers` - can log on to Workstations, managed by dev_eng_admins
-- Screenshot: ![My Image](Screenshots/Users.png)
+- Screenshot: ![My Image](Screenshots/OUS.png)
 
 **Extra Credit (5%)** Provide a scripted solution that generates these. There may be a sample `.csv` file in this folder
+  * Scripted solution in repo as ```bulkcreate.ps1```
+
+---
 
 ### Joining Users
 
 Using a PowerShell script, join the users in [users.csv](users.csv) to your domain. Make sure `domain User` is corrected to your `OU` name. The users need to be organized into the [Domain] Users OU and into their corresponding child OUs.
 
-- Add csv file of users and PowerShell script to your repo.
-- Screenshot that users are in correct OUs
-  - one screenshot is sufficient, just need to see concept is accomplished
+- Screenshot: ![My Image](Screenshots/Users.png)
 
 **Extra Credit (5%)** Provide a scripted solution to add users to the OUs given in the OU1 and OU2 column.
+
+---
 
 ### Joining Computers
 
 Create another Windows Server instance in AWS on your VPC. Write the steps needed to join the Windows Server to the Domain in the `[Domain] Computers` OU. Provide screenshot proof of success.
 
-- Resources:
-  - https://adamtheautomator.com/add-computer-to-domain/
-  - Don't forget that DNS step ;)
+- Steps:
+  - 
+
+---
 
 ### Creating Groups
 
@@ -94,7 +100,7 @@ Find guides to create the following Group Policy Objects and specify where they 
 
 **Extra Credit (5%)** Create and apply one of these policies, and show proof it worked.
 
-- The Windows Server you joined to the domain can serve as a good dummy here
+---
 
 ### Managing OUs
 
@@ -106,13 +112,3 @@ Document how to delegate control of an OU to a group, which OUs they now delegat
 
 - Resources
 - https://theitbros.com/active-directory-organizational-unit-ou/
-
-## Submission
-
-In the Pilot Dropbox, paste the URL to your submission
-  - URL should look like: https://github.com/WSU-kduncan/ceg2410-YOURGITHUBUSERNAME/blob/main/Windows
-
-Contents should include:
-- `README.md`
-- csv file(s) (for EC)
-- PowerShell script(s) (for EC)
