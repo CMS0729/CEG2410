@@ -1,5 +1,7 @@
 # Project 3
 
+### Name: Cody Southworth
+
 ## Setup AD DC
 
 - Configuring a Windows Server to be a Domain Controller
