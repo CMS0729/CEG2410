@@ -39,6 +39,7 @@ Create the following Organizational Units - Provide screenshot proof:
 - Screenshot: ![My Image](Screenshots/Users.png)
 
 **Extra Credit (5%)** Provide a scripted solution that generates these. There may be a sample `.csv` file in this folder
+  * Scripted solution in repo as ```bulkcreate.ps1```
 
 ### Joining Users
 
