@@ -49,6 +49,7 @@
   - Step 4: Input the name of the domain to add the computer to in the Domain box and click OK
   - Step 5: If the computer can contact a domain controller, it will prompt you for a username and password, as shown below. Input a user account with permissions to add this computer to the domain and click OK
   - Step 6: If all goes well, you will receive a message welcoming you to the domain as shown below
+- Screenshot: ![My Image](Screenshots/Joined_Computer.png)
 
 ---
 
@@ -79,14 +80,28 @@ Create the following Security Groups and define where they should be within the 
 
 Find guides to create the following Group Policy Objects and specify where they should be applied.
 
-- Lock out Workstations after 15 minutes of inactivity.
+- Lock out Workstations after 15 minutes of inactivity
+  - [Guide](https://community.spiceworks.com/topic/1416384-gpo-to-lock-the-computer-after-10-minutes-of-inactivity)
+  - Where it should be: 
 - Prevent execution of programs on computers in Secure OU
+  - [Guide](https://www.technipages.com/prevent-users-from-running-certain-programs/)
+  - Where it should be:
 - Disable Guest account login to computers in Secure OU
+  - [Guide](https://www.lepide.com/blog/top-10-most-important-group-policy-settings-for-preventing-security-breaches)
+  - Where it should be: ```taiga Computers```
 - Allow server_access to sign on to Servers
-- Set Desktop background for Conference computers to company logo.
+  - [Guide]()
+  - Where it should be:
+- Set Desktop background for Conference computers to company logo
+  -  [Guide]()
+  -  Where it should be:
 - Allow users in `remote_workstation` group to RDP to Workstations
+  - [Guide]()
+  - Where it should be:
 
 **Extra Credit (5%)** Create and apply one of these policies, and show proof it worked.
+Screenshot: ![My Image](Screenshots/GPO.png)
+Screenshot: ![My Image](Screenshots/"GPO Dummy.png")
 
 ---
 
