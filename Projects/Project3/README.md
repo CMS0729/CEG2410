@@ -98,7 +98,7 @@ Create the following Security Groups and define where they should be within the 
 - `hr_finance_admins` - IT admins to handle HR and finance accounts
     - ```Placed within "taiga Users" (OU1), "Admins" (OU2)```
 - `remote_workstation` - Group of workstations that allow RDP connections
-    - ```Placed within "taiga Computers" (OU1), "Workstations"```
+    - ```Placed within "taiga Computers" (OU1), "Workstations" (OU2)```
 
 ## OUs & GPOs
 
