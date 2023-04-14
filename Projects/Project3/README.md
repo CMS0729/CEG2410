@@ -94,7 +94,7 @@ Find guides to create the following Group Policy Objects and specify where they 
   - Where it should be: ```taiga Servers (OU1)```
 - Set Desktop background for Conference computers to company logo
   -  [Guide](https://woshub.com/setting-desktop-wallpapers-background-using-group-policy/)
-  -  Where it should be: ```Conference(OU2)/taiga Computers(OU1)```
+  -  Where it should be: ```Conference(OU2) / taiga Computers(OU1)```
 - Allow users in `remote_workstation` group to RDP to Workstations
   - [Guide](https://learn.microsoft.com/en-us/answers/questions/370650/group-policy-entry-to-allow-remote-administration)
   - Where it should be: ```a```
