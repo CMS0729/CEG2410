@@ -118,8 +118,13 @@ Screenshot: ![My Image](Screenshots/GPO_Dummy.png)
   - hr_finance_admins:
     - "Finance" (OU2), "HR" (OU2) / "taiga Users" (OU1)
   - Delegations:
-    - 1.) Create, delete, and manage user accounts: IT admins may need to create, delete, and manage user accounts for HR and finance staff, including setting up new accounts, disabling or deleting accounts of terminated employees, and managing user properties such as display name, job title, and department.
+    - Create, delete, and manage user accounts: IT admins may need to create, delete, and manage user accounts for HR and finance staff, including setting up new accounts, disabling or deleting accounts of terminated employees, and managing user properties such as display name, job title, and department.
+    - Reset passwords and unlock user accounts: IT admins may need to reset passwords for HR and finance user accounts that are locked out or forgotten by users, as well as unlock user accounts that have been locked due to too many failed login attempts.
+    - Manage permissions on HR and finance objects: IT admins may need to grant, modify, or revoke permissions on HR and finance-related objects within Active Directory, such as shared folders, file shares, and printers, to ensure that HR and finance staff have appropriate access to resources based on their job responsibilities.
+    - Manage Group Policy Objects (GPOs): IT admins may need to create, modify, or manage GPOs that apply policies related to HR and finance functions, such as password policies, account lockout policies, and security policies to enforce data security and compliance requirements.
   - eng_dev_admins:
     - "Engineers" (OU2), "Developers" (OU2) / "taiga Users" (OU1)
   - Delegations:
-    - a
+    - Create, delete, and manage user accounts: IT admins may need to create, delete, and manage user accounts for developers and engineers, including setting up new accounts, disabling or deleting accounts of terminated employees, and managing user properties such as display name, job title, and department.
+    - Manage permissions on development and engineering objects: IT admins may need to grant, modify, or revoke permissions on development and engineering-related objects within Active Directory, such as source code repositories, build servers, and development environments, to ensure that developers and engineers have appropriate access to resources based on their job responsibilities.
+    - Manage Group Policy Objects (GPOs): IT admins may need to create, modify, or manage GPOs that apply policies related to development and engineering functions, such as development tools configurations, software installation policies, and security policies to enforce coding standards and development best practices.
