@@ -58,19 +58,19 @@
 Create the following Security Groups and define where they should be within the OUs based on their roles:
 
 - `project_repos_RW` - users who have Read / Write access to project repositories
-    - ```Placed within "taiga Users" (OU1), "Admins" (OU2)```
+    - Placed within: ```"Admins" (OU2) / taiga "taiga Users" (OU1)```
 - `finance_RW` - users who have Read / Write access to finance share
     - ```Placed within "taiga Users" (OU1), "Finance" (OU2)```
 - `onboarding_R` - users who have Read access to onboarding documents
-    - ```Placed within "taiga Users" (OU1), "Admins" (OU2)```
+    - Placed within: ```"Admins" (OU2) / taiga "taiga Users" (OU1)```
 - `server_access` - users who can log on to Servers
     - ```Placed within "taiga Servers" (OU1)```
 - `dev_eng_admins` - IT admins to handle Developer and Engineer accounts
-    - ```Placed within "taiga Users" (OU1), "Admins" (OU2)```
+    - Placed within: ```"Admins" (OU2) / taiga "taiga Users" (OU1)```
 - `hr_finance_admins` - IT admins to handle HR and finance accounts
-    - ```Placed within "taiga Users" (OU1), "Admins" (OU2)```
+    - Placed within: ```"Admins" (OU2) / taiga "taiga Users" (OU1)```
 - `remote_workstation` - Group of workstations that allow RDP connections
-    - ```Placed within "taiga Computers" (OU1), "Workstations" (OU2)```
+    - Placed within: ```"Workstations" (OU2) / taiga "taiga Computers" (OU1)```
 
 ---
 
@@ -97,7 +97,7 @@ Find guides to create the following Group Policy Objects and specify where they 
   -  Placed within: ```"Conference" (OU2) / taiga "Computers" (OU1)```
 - Allow users in `remote_workstation` group to RDP to Workstations
   - [Guide](https://learn.microsoft.com/en-us/answers/questions/370650/group-policy-entry-to-allow-remote-administration)
-  - Placed within: ```a```
+  - Placed within: ```"Workstations" (OU2) / taiga "taiga Computers" (OU1)```
 
 **Extra Credit (5%)** Create and apply one of these policies, and show proof it worked.
 Screenshot: ![My Image](Screenshots/GPO.png)
