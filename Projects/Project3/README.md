@@ -25,19 +25,6 @@
 ## AD Structure
 
 ### Create OUs
-
-Create the following Organizational Units - Provide screenshot proof:
-
-- `[Domain] Computers` - client / user machines
-  - `Conference` - publicly accessible kiosks and presentation devices
-  - `Secure` - machines for HR and finance users
-  - `Workstations` - machines for devs and engineers
-- `[Domain] Servers` - servers for org (data shares, repo hosts, HPCs)
-- `[Domain] Users`
-  - `Finance` - can log on to Secure computers, managed by hr_finance_admins group
-  - `HR` - can log on to Secure computers, managed by hr_finance_admins group
-  - `Engineers` - can log on to Workstations, managed by dev_eng_admins
-  - `Developers` - can log on to Workstations, managed by dev_eng_admins
 - Screenshot: ![My Image](Screenshots/OUS.png)
 
 **Extra Credit (5%)** Provide a scripted solution that generates these. There may be a sample `.csv` file in this folder
@@ -46,9 +33,6 @@ Create the following Organizational Units - Provide screenshot proof:
 ---
 
 ### Joining Users
-
-Using a PowerShell script, join the users in [users.csv](users.csv) to your domain. Make sure `domain User` is corrected to your `OU` name. The users need to be organized into the [Domain] Users OU and into their corresponding child OUs.
-
 - Screenshot: ![My Image](Screenshots/Users.png)
 
 **Extra Credit (5%)** Provide a scripted solution to add users to the OUs given in the OU1 and OU2 column.
