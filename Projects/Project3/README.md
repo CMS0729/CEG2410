@@ -118,7 +118,7 @@ Screenshot: ![My Image](Screenshots/GPO_Dummy.png)
   - hr_finance_admins:
     - "Finance" (OU2), "HR" (OU2) / "taiga Users" (OU1)
   - Delegations:
-    - a
+    - 1.) Create, delete, and manage user accounts: IT admins may need to create, delete, and manage user accounts for HR and finance staff, including setting up new accounts, disabling or deleting accounts of terminated employees, and managing user properties such as display name, job title, and department.
   - eng_dev_admins:
     - "Engineers" (OU2), "Developers" (OU2) / "taiga Users" (OU1)
   - Delegations:
