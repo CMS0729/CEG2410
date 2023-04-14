@@ -4,7 +4,7 @@ Import-Csv C:\Users\Administrator\Desktop\users.csv |
 foreach {
     $ou1 = $_.OU1
     $ou2 = $_.OU2
-    $ouPath = "OU=$ou2,OU=$ou1,DC=ad,DC=taiga,DC=org"
+    $ouPath = "OU=$ou2,OU=$ou1,DC=ad,DC=taiga,DC=com"
     $userProps = @{
         Name = $_.FirstName + "," + $_.LastName
         GivenName = $_.FirstName
