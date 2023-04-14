@@ -1,5 +1,5 @@
 Name,Path
-taiga Users,"dc=ad,dc=taiga,dc=org"
+taiga Users,"dc=ad,dc=taiga,dc=com"
 Finance,"OU=taiga Users,dc=ad,dc=taiga,dc=com"
 HR,"OU=taiga Users,dc=ad,dc=taiga,dc=com"
 Engineers,"OU=taiga Users,dc=ad,dc=taiga,dc=com"
