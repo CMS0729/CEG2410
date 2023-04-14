@@ -86,6 +86,7 @@ Create another Windows Server instance in AWS on your VPC. Write the steps neede
 Create the following Security Groups and define where they should be within the OUs based on their roles:
 
 - `project_repos_RW` - users who have Read / Write access to project repositories
+    - ```Placed within "taiga Users" (OU1), "Admins" (OU2)"```
 - `finance_RW` - users who have Read / Write access to finance share
 - `onboarding_R` - users who have Read access to onboarding documents
 - `server_access` - users who can log on to Servers
