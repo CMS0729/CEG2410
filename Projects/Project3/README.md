@@ -58,7 +58,7 @@
 Create the following Security Groups and define where they should be within the OUs based on their roles:
 
 - `project_repos_RW` - users who have Read / Write access to project repositories
-    - Placed within: ```"Admins" (OU2) / taiga "taiga Users" (OU1)```
+    - Placed within: ```"Devlopers" (OU2) / taiga "taiga Users" (OU1)```
 - `finance_RW` - users who have Read / Write access to finance share
     - ```Placed within "taiga Users" (OU1), "Finance" (OU2)```
 - `onboarding_R` - users who have Read access to onboarding documents
