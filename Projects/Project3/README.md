@@ -58,19 +58,19 @@
 Create the following Security Groups and define where they should be within the OUs based on their roles:
 
 - `project_repos_RW` - users who have Read / Write access to project repositories
-    - ```Placed within "taiga Users" (OU1), "Admins" (OU2)```
+    - Placed within: ```"Developers" (OU2) / taiga "taiga Users" (OU1)```
 - `finance_RW` - users who have Read / Write access to finance share
-    - ```Placed within "taiga Users" (OU1), "Finance" (OU2)```
+    - Placed within: ```"Finance" (OU2) / taiga "taiga Users" (OU1)```
 - `onboarding_R` - users who have Read access to onboarding documents
-    - ```Placed within "taiga Users" (OU1), "Admins" (OU2)```
+    - Placed within: ```"Finance" (OU2) / taiga "taiga Users" (OU1)```
 - `server_access` - users who can log on to Servers
     - ```Placed within "taiga Servers" (OU1)```
 - `dev_eng_admins` - IT admins to handle Developer and Engineer accounts
-    - ```Placed within "taiga Users" (OU1), "Admins" (OU2)```
+    - Placed within: ```"Admins" (OU2) / taiga "taiga Users" (OU1)```
 - `hr_finance_admins` - IT admins to handle HR and finance accounts
-    - ```Placed within "taiga Users" (OU1), "Admins" (OU2)```
+    - Placed within: ```"Admins" (OU2) / taiga "taiga Users" (OU1)```
 - `remote_workstation` - Group of workstations that allow RDP connections
-    - ```Placed within "taiga Computers" (OU1), "Workstations" (OU2)```
+    - Placed within: ```"Workstations" (OU2) / taiga "taiga Computers" (OU1)```
 
 ---
 
@@ -82,36 +82,50 @@ Find guides to create the following Group Policy Objects and specify where they 
 
 - Lock out Workstations after 15 minutes of inactivity
   - [Guide](https://community.spiceworks.com/topic/1416384-gpo-to-lock-the-computer-after-10-minutes-of-inactivity)
-  - Where it should be: 
+  - Placed within: ```"Workstations" (OU2) / "taiga Computers" (OU1)```
 - Prevent execution of programs on computers in Secure OU
   - [Guide](https://www.technipages.com/prevent-users-from-running-certain-programs/)
-  - Where it should be:
+  - Placed within: ```"taiga Secure" (OU1)```
 - Disable Guest account login to computers in Secure OU
   - [Guide](https://www.lepide.com/blog/top-10-most-important-group-policy-settings-for-preventing-security-breaches)
-  - Where it should be: ```taiga Computers```
+  - Placed within: ```"taiga Secure" (OU1)```
 - Allow server_access to sign on to Servers
-  - [Guide]()
-  - Where it should be:
+  - [Guide](https://community.spiceworks.com/how_to/2797-restrict-computer-logons-to-a-group-of-users)
+  - Placed within: ```"taiga Servers" (OU1)```
 - Set Desktop background for Conference computers to company logo
-  -  [Guide]()
-  -  Where it should be:
+  -  [Guide](https://woshub.com/setting-desktop-wallpapers-background-using-group-policy/)
+  -  Placed within: ```"Conference" (OU2) / taiga "Computers" (OU1)```
 - Allow users in `remote_workstation` group to RDP to Workstations
-  - [Guide]()
-  - Where it should be:
+  - [Guide](https://learn.microsoft.com/en-us/answers/questions/370650/group-policy-entry-to-allow-remote-administration)
+  - Placed within: ```"Workstations" (OU2) / taiga "taiga Computers" (OU1)```
 
 **Extra Credit (5%)** Create and apply one of these policies, and show proof it worked.
 Screenshot: ![My Image](Screenshots/GPO.png)
-Screenshot: ![My Image](Screenshots/"GPO Dummy.png")
+Screenshot: ![My Image](Screenshots/GPO_Dummy.png)
 
 ---
 
 ### Managing OUs
-
-More people are joining the IT/ administration side of things. Note: you can promote from within or create some new users
-
-Join at least one person to the `hr_finance_admins` and `eng_dev_admins` groups, respectively. Delegate control of the OUs corresponding to the appropriate admin groups.
-
-Document how to delegate control of an OU to a group, which OUs they now delegate, and what permissions they were given (and why you think the scope is appropriate)
-
-- Resources
-- https://theitbros.com/active-directory-organizational-unit-ou/
+- [Guide](https://theitbros.com/active-directory-organizational-unit-ou/) which I followed on how to setup Delegatation Control
+- [Guide](https://www.netwrix.com/active_directory_delegation.html) which I followed for recommendations for delegation task
+- Steps:
+  - Step 1: Open Active Directory Users and Computers applet
+  - Step 2: Find the OU you would like to delegate control to, right click on it and select "Delegate Control"
+  - Step 3: The Delegation of Control Wizard will pop up select "Next". After selecting "Next", select "Add". Another menu will pop up
+  - Step 4: At the bottom of the menu a prompt with "Enter the object names to select" will appear. Inside the box input the object name you would like to add. In my case it would be for example "hr_finance_admins". Once you have added it, select "Next".
+  - Step 5: Another prompt will pop up asking what task you would like to give the group. Select the options and select "Next". All Done!
+- Which OUs they now delegate:
+  - hr_finance_admins:
+    - "Finance" (OU2), "HR" (OU2) / "taiga Users" (OU1)
+  - Delegations:
+    - Create, delete, and manage user accounts: IT admins may need to create, delete, and manage user accounts for HR and finance staff, including setting up new accounts, disabling or deleting accounts of terminated employees, and managing user properties such as display name, job title, and department
+    - Reset passwords and unlock user accounts: IT admins may need to reset passwords for HR and finance user accounts that are locked out or forgotten by users, as well as unlock user accounts that have been locked due to too many failed login attempts
+    - Manage permissions on HR and finance objects: IT admins may need to grant, modify, or revoke permissions on HR and finance-related objects within Active Directory, such as shared folders, file shares, and printers, to ensure that HR and finance staff have appropriate access to resources based on their job responsibilities
+    - Manage Group Policy Objects (GPOs): IT admins may need to create, modify, or manage GPOs that apply policies related to HR and finance functions, such as password policies, account lockout policies, and security policies to enforce data security and compliance requirements
+  - eng_dev_admins:
+    - "Engineers" (OU2), "Developers" (OU2) / "taiga Users" (OU1)
+  - Delegations:
+    - Create, delete, and manage user accounts: IT admins may need to create, delete, and manage user accounts for developers and engineers, including setting up new accounts, disabling or deleting accounts of terminated employees, and managing user properties such as display name, job title, and department
+    - Reset passwords and unlock user accounts: IT admins may need to reset passwords for HR and finance user accounts that are locked out or forgotten by users, as well as unlock user accounts that have been locked due to too many failed login attempts
+    - Manage permissions on development and engineering objects: IT admins may need to grant, modify, or revoke permissions on development and engineering-related objects within Active Directory, such as source code repositories, build servers, and development environments, to ensure that developers and engineers have appropriate access to resources based on their job responsibilities
+    - Manage Group Policy Objects (GPOs): IT admins may need to create, modify, or manage GPOs that apply policies related to development and engineering functions, such as development tools configurations, software installation policies, and security policies to enforce coding standards and development best practices
