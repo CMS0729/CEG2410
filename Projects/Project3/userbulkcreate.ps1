@@ -1,19 +1,16 @@
+# Read default password as secure string from user input
 $secpass = Read-Host "Enter Default Password for Accounts" -AsSecureString
 
-Import-Csv C:\Users\Administrator\Desktop\users.csv |
-foreach {
-    $ou1 = $_.OU1
-    $ou2 = $_.OU2
-    $ouPath = "OU=$ou2,OU=$ou1,DC=ad,DC=taiga,DC=com"
-    $userProps = @{
-        Name = $_.FirstName + "," + $_.LastName
-        GivenName = $_.FirstName
-        Surname = $_.LastName
-        SamAccountName = $_.SamAccountName
-        UserPrincipalName = "$($_.SamAccountName)@adtaiaga.com"
-        AccountPassword = $secpass
-        Path = $ouPath
-        Enabled = $true
-    }
-    New-ADUser @userProps
+# Import CSV file
+$csvPath = "C:\Users\Administrator\Desktop\users.csv"
+$users = Import-Csv $csvPath
+
+# Loop through each user in the CSV and create user accounts
+foreach ($user in $users) {
+    # Create user account with New-ADUser cmdlet
+    New-ADUser -Name "$($user.FirstName) $($user.LastName)" `
+        -SamAccountName $user.SamAccountName `
+        -Path "OU=$($user.OU2),OU=$($user.OU1),DC=example,DC=com" `
+        -Enabled $true `
+        -AccountPassword $secpass
 }
