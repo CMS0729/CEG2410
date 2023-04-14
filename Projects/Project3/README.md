@@ -50,6 +50,7 @@
   - Step 5: If the computer can contact a domain controller, it will prompt you for a username and password, as shown below. Input a user account with permissions to add this computer to the domain and click OK
   - Step 6: If all goes well, you will receive a message welcoming you to the domain as shown below
 - Screenshot: ![My Image](Screenshots/Joined_Computer.png)
+
 ---
 
 ### Creating Groups
@@ -79,14 +80,28 @@ Create the following Security Groups and define where they should be within the 
 
 Find guides to create the following Group Policy Objects and specify where they should be applied.
 
-- Lock out Workstations after 15 minutes of inactivity.
+- Lock out Workstations after 15 minutes of inactivity
+  - [Guide](https://community.spiceworks.com/topic/1416384-gpo-to-lock-the-computer-after-10-minutes-of-inactivity)
+  - Where it should be: 
 - Prevent execution of programs on computers in Secure OU
+  - [Guide](https://learn.microsoft.com/en-us/answers/questions/844495/creating-group-policy-to-prevent-users-to-run-prog)
+  - Where it should be:
 - Disable Guest account login to computers in Secure OU
+  - [Guide](https://www.lepide.com/blog/top-10-most-important-group-policy-settings-for-preventing-security-breaches/#:~:text=from%20abusing%20access%3A-,In%20Group%20Policy%20Management%20Editor%20(opened%20for%20a%20custom%20GPO,checkbox%20and%20click%20%E2%80%9CDisabled%E2%80%9D.)
+  - Where it should be:
 - Allow server_access to sign on to Servers
-- Set Desktop background for Conference computers to company logo.
+  - [Guide]()
+  - Where it should be:
+- Set Desktop background for Conference computers to company logo
+  -  [Guide]()
+  -  Where it should be:
 - Allow users in `remote_workstation` group to RDP to Workstations
+  - [Guide]()
+  - Where it should be:
 
 **Extra Credit (5%)** Create and apply one of these policies, and show proof it worked.
+Screenshot: ![My Image](Screenshots/GPO.png)
+Screenshot: ![My Image](Screenshots/GPODummy.png)
 
 ---
 
