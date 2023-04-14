@@ -44,8 +44,8 @@
 
 Create another Windows Server instance in AWS on your VPC. Write the steps needed to join the Windows Server to the Domain in the `[Domain] Computers` OU. Provide screenshot proof of success.
 
-- Steps:
-  - 
+- Steps: [I followed the guide from](https://adamtheautomator.com/add-computer-to-domain/)
+  - Step 1:
 
 ---
 
