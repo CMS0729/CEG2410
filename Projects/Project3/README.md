@@ -82,7 +82,7 @@ Find guides to create the following Group Policy Objects and specify where they 
 
 - Lock out Workstations after 15 minutes of inactivity
   - [Guide](https://community.spiceworks.com/topic/1416384-gpo-to-lock-the-computer-after-10-minutes-of-inactivity)
-  - Where it should be: ```Workstations (OU2)/taiga Computers (OU1)```
+  - Where it should be: ```Workstations (OU2) / taiga Computers (OU1)```
 - Prevent execution of programs on computers in Secure OU
   - [Guide](https://www.technipages.com/prevent-users-from-running-certain-programs/)
   - Where it should be: ```taiga Secure```
