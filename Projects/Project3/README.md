@@ -1,31 +1,5 @@
 # Project 3
 
-- [Getting Started & Notes](#getting-started--notes)
-- [Setup AD DC](#setup-ad-dc)
-- [AD Structure](#ad-structure)
-- [OUs & GPOs](#ous--gpos)
-- [Submission](#submission)
-- [Rubric](Rubric.md)
-
-## Getting Started & Notes
-
-### Accessing Windows Server Password:
-
-- Go to EC2 menu
-- Click on Windows Server 2019 checkbox
-- Click Details -> Security -> Get Windows password
-- Paste the contents of your private key you've been using for your ubuntu system
-
-### Installing VSCode for PowerShell on Windows Server 2019:
-
-1. Check and install updates (I restarted after updates)
-2. Open IE, enable **Downloads and Active Scripting** (https://docs.rackspace.com/support/how-to/enable-file-downloads-in-internet-explorer/)
-3. Restart Internet Explorer
-4. Download & Install Edge **for Windows Server 2019** (https://www.microsoft.com/en-us/edge)
-5. Open Edge, download and install VSCode **System Installer** x64-bit (https://code.visualstudio.com/Download#)
-6. Install git for Windows (https://git-scm.com/download/win)
-7. Open VSCode, install PowerShell extension by Microsoft
-
 ## Setup AD DC
 
 - Configuring a Windows Server to be a Domain Controller
