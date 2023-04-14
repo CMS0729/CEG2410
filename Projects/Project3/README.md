@@ -38,7 +38,7 @@ Create the following Organizational Units - Provide screenshot proof:
   - `HR` - can log on to Secure computers, managed by hr_finance_admins group
   - `Engineers` - can log on to Workstations, managed by dev_eng_admins
   - `Developers` - can log on to Workstations, managed by dev_eng_admins
-- Screenshot: ![My Image](Screenshots/Users.png)
+- Screenshot: ![My Image](Screenshots/OUS.png)
 
 **Extra Credit (5%)** Provide a scripted solution that generates these. There may be a sample `.csv` file in this folder
   * Scripted solution in repo as ```bulkcreate.ps1```
@@ -49,9 +49,7 @@ Create the following Organizational Units - Provide screenshot proof:
 
 Using a PowerShell script, join the users in [users.csv](users.csv) to your domain. Make sure `domain User` is corrected to your `OU` name. The users need to be organized into the [Domain] Users OU and into their corresponding child OUs.
 
-- Add csv file of users and PowerShell script to your repo.
-- Screenshot that users are in correct OUs
-  - one screenshot is sufficient, just need to see concept is accomplished
+- Screenshot: ![My Image](Screenshots/Users.png)
 
 **Extra Credit (5%)** Provide a scripted solution to add users to the OUs given in the OU1 and OU2 column.
 
