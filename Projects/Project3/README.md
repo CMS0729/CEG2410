@@ -84,7 +84,7 @@ Find guides to create the following Group Policy Objects and specify where they 
   - [Guide](https://community.spiceworks.com/topic/1416384-gpo-to-lock-the-computer-after-10-minutes-of-inactivity)
   - Where it should be: 
 - Prevent execution of programs on computers in Secure OU
-  - [Guide](https://learn.microsoft.com/en-us/answers/questions/844495/creating-group-policy-to-prevent-users-to-run-prog)
+  - [Guide]([https://learn.microsoft.com/en-us/answers/questions/844495/creating-group-policy-to-prevent-users-to-run-prog](https://www.technipages.com/prevent-users-from-running-certain-programs/))
   - Where it should be:
 - Disable Guest account login to computers in Secure OU
   - [Guide](https://www.lepide.com/blog/top-10-most-important-group-policy-settings-for-preventing-security-breaches)
