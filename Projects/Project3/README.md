@@ -101,7 +101,7 @@ Find guides to create the following Group Policy Objects and specify where they 
 
 **Extra Credit (5%)** Create and apply one of these policies, and show proof it worked.
 Screenshot: ![My Image](Screenshots/GPO.png)
-Screenshot: ![My Image](Screenshots/GPO/ Dummy.png)
+Screenshot: ![My Image](Screenshots/"GPO Dummy.png")
 
 ---
 
