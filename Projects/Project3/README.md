@@ -82,22 +82,22 @@ Find guides to create the following Group Policy Objects and specify where they 
 
 - Lock out Workstations after 15 minutes of inactivity
   - [Guide](https://community.spiceworks.com/topic/1416384-gpo-to-lock-the-computer-after-10-minutes-of-inactivity)
-  - Where it should be: 
+  - Where it should be: ```Workstations (OU2)/taiga Computers (OU1)```
 - Prevent execution of programs on computers in Secure OU
   - [Guide](https://www.technipages.com/prevent-users-from-running-certain-programs/)
-  - Where it should be:
+  - Where it should be: ```taiga Secure```
 - Disable Guest account login to computers in Secure OU
   - [Guide](https://www.lepide.com/blog/top-10-most-important-group-policy-settings-for-preventing-security-breaches)
-  - Where it should be: ```taiga Computers```
+  - Where it should be: ```taiga Secure```
 - Allow server_access to sign on to Servers
-  - [Guide]()
-  - Where it should be:
+  - [Guide](https://community.spiceworks.com/how_to/2797-restrict-computer-logons-to-a-group-of-users)
+  - Where it should be: ```taiga Servers (OU1)```
 - Set Desktop background for Conference computers to company logo
-  -  [Guide]()
-  -  Where it should be:
+  -  [Guide](https://woshub.com/setting-desktop-wallpapers-background-using-group-policy/)
+  -  Where it should be: ```Conference(OU2)/taiga Computers(OU1)```
 - Allow users in `remote_workstation` group to RDP to Workstations
-  - [Guide]()
-  - Where it should be:
+  - [Guide](https://learn.microsoft.com/en-us/answers/questions/370650/group-policy-entry-to-allow-remote-administration)
+  - Where it should be: ```a```
 
 **Extra Credit (5%)** Create and apply one of these policies, and show proof it worked.
 Screenshot: ![My Image](Screenshots/GPO.png)
