@@ -116,7 +116,7 @@ Screenshot: ![My Image](Screenshots/GPO_Dummy.png)
   - Step 5: Another prompt will pop up asking what task you would like to give the group. Select the options and select "Next". All Done!
 - Which OUs they now delegate:
   - hr_finance_admins:
-    - "Finance" (OU2) / "taiga Users" (OU1)
+    - "Finance" (OU2), "HR" (OU2) / "taiga Users" (OU1)
   - Delegations:
     - a
   - eng_dev_admins:
