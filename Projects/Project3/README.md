@@ -106,12 +106,18 @@ Screenshot: ![My Image](Screenshots/GPO_Dummy.png)
 ---
 
 ### Managing OUs
-
-More people are joining the IT/ administration side of things. Note: you can promote from within or create some new users
-
-Join at least one person to the `hr_finance_admins` and `eng_dev_admins` groups, respectively. Delegate control of the OUs corresponding to the appropriate admin groups.
-
-Document how to delegate control of an OU to a group, which OUs they now delegate, and what permissions they were given (and why you think the scope is appropriate)
-
-- Resources
-- https://theitbros.com/active-directory-organizational-unit-ou/
+- Steps:
+  - Step 1: Open Active Directory Users and Computers applet
+  - Step 2: Find the OU you would like to delegate control to, right click on it and select "Delegate Control"
+  - Step 3: The Delegation of Control Wizard will pop up select "Next". After selecting "Next", select "Add". Another menu will pop up
+  - Step 4: At the bottom of the menu a prompt with "Enter the object names to select" will appear. Inside the box input the object name you would like to add. In my case it would be for example "hr_finance_admins". Once you have added it, select "Next".
+  - Step 5: Another prompt will pop up asking what task you would like to give the group. Select the options and select "Next". All Done!
+- Which OUs they now delegate:
+  - hr_finance_admins:
+    - "Finance" (OU2) / "taiga Users" (OU1)
+  - Delegations:
+    - a
+  - eng_dev_admins:
+    - "Engineers" (OU2) / "taiga Users" (OU1)
+  - Delegations:
+    - a
