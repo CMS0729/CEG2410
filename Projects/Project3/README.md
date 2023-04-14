@@ -25,20 +25,7 @@
 ## AD Structure
 
 ### Create OUs
-
-Create the following Organizational Units - Provide screenshot proof:
-
-- `[Domain] Computers` - client / user machines
-  - `Conference` - publicly accessible kiosks and presentation devices
-  - `Secure` - machines for HR and finance users
-  - `Workstations` - machines for devs and engineers
-- `[Domain] Servers` - servers for org (data shares, repo hosts, HPCs)
-- `[Domain] Users`
-  - `Finance` - can log on to Secure computers, managed by hr_finance_admins group
-  - `HR` - can log on to Secure computers, managed by hr_finance_admins group
-  - `Engineers` - can log on to Workstations, managed by dev_eng_admins
-  - `Developers` - can log on to Workstations, managed by dev_eng_admins
-- Screenshot: ![My Image](Screenshots/)
+- Screenshot: ![My Image](Screenshots/OUS.png)
 
 **Extra Credit (5%)** Provide a scripted solution that generates these. There may be a sample `.csv` file in this folder
   * Scripted solution in repo as ```bulkcreate.ps1```
@@ -46,9 +33,6 @@ Create the following Organizational Units - Provide screenshot proof:
 ---
 
 ### Joining Users
-
-Using a PowerShell script, join the users in [users.csv](users.csv) to your domain. Make sure `domain User` is corrected to your `OU` name. The users need to be organized into the [Domain] Users OU and into their corresponding child OUs.
-
 - Screenshot: ![My Image](Screenshots/Users.png)
 
 **Extra Credit (5%)** Provide a scripted solution to add users to the OUs given in the OU1 and OU2 column.
@@ -57,11 +41,14 @@ Using a PowerShell script, join the users in [users.csv](users.csv) to your doma
 ---
 
 ### Joining Computers
-
-Create another Windows Server instance in AWS on your VPC. Write the steps needed to join the Windows Server to the Domain in the `[Domain] Computers` OU. Provide screenshot proof of success.
-
+[I followed this guide](https://adamtheautomator.com/add-computer-to-domain/)
 - Steps:
-  - 
+  - Step 1: Open the System Properties control panel applet
+  - Step 2: On the System Properties screen, click the Change button. This button will bring up the Computer Name/Domain Changes dialog box
+  - Step 3: In the Computer Name/Domain Changes dialog box, click on the Domain radio option to input a domain to add this computer to
+  - Step 4: Input the name of the domain to add the computer to in the Domain box and click OK
+  - Step 5: If the computer can contact a domain controller, it will prompt you for a username and password, as shown below. Input a user account with permissions to add this computer to the domain and click OK
+  - Step 6: If all goes well, you will receive a message welcoming you to the domain as shown below
 
 ---
 
