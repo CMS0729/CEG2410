@@ -120,6 +120,6 @@ Screenshot: ![My Image](Screenshots/GPO_Dummy.png)
   - Delegations:
     - a
   - eng_dev_admins:
-    - "Engineers" (OU2) / "taiga Users" (OU1)
+    - "Engineers" (OU2), "Developers (OU2) / "taiga Users" (OU1)
   - Delegations:
     - a
