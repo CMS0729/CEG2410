@@ -106,6 +106,8 @@ Screenshot: ![My Image](Screenshots/GPO_Dummy.png)
 ---
 
 ### Managing OUs
+- [Guide](https://theitbros.com/active-directory-organizational-unit-ou/) which I followed on how to setup Delegatation Control
+- [Guide](https://www.netwrix.com/active_directory_delegation.html) which I followed for recommendations for delegation task
 - Steps:
   - Step 1: Open Active Directory Users and Computers applet
   - Step 2: Find the OU you would like to delegate control to, right click on it and select "Delegate Control"
