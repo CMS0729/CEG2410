@@ -49,7 +49,7 @@
   - Step 4: Input the name of the domain to add the computer to in the Domain box and click OK
   - Step 5: If the computer can contact a domain controller, it will prompt you for a username and password, as shown below. Input a user account with permissions to add this computer to the domain and click OK
   - Step 6: If all goes well, you will receive a message welcoming you to the domain as shown below
-
+- Screenshot: ![My Image](Screenshots/Joined_Computer.png)
 ---
 
 ### Creating Groups
