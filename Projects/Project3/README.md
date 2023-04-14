@@ -28,7 +28,7 @@
 - Screenshot: ![My Image](Screenshots/OUS.png)
 
 **Extra Credit (5%)** Provide a scripted solution that generates these. There may be a sample `.csv` file in this folder
-  * Scripted solution in repo as ```bulkcreate.ps1```
+  * Scripted solution in repo as ```ousbulkcreate.ps1```
 
 ---
 
@@ -36,7 +36,7 @@
 - Screenshot: ![My Image](Screenshots/Users.png)
 
 **Extra Credit (5%)** Provide a scripted solution to add users to the OUs given in the OU1 and OU2 column.
-  * Scripted solution in repo as ```OU-bulkcreate.ps1```
+  * Scripted solution in repo as ```userbulkcreate.ps1```
 
 ---
 
