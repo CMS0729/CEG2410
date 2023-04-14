@@ -44,8 +44,13 @@
 
 Create another Windows Server instance in AWS on your VPC. Write the steps needed to join the Windows Server to the Domain in the `[Domain] Computers` OU. Provide screenshot proof of success.
 
-- Steps: [I followed the guide from](https://adamtheautomator.com/add-computer-to-domain/)
-  - Step 1:
+- Steps: [I followed this guide](https://adamtheautomator.com/add-computer-to-domain/)
+  - Step 1: Open the System Properties control panel applet
+  - Step 2: On the System Properties screen, click the Change button. This button will bring up the Computer Name/Domain Changes dialog box
+  - Step 3: In the Computer Name/Domain Changes dialog box, click on the Domain radio option to input a domain to add this computer to
+  - Step 4: Input the name of the domain to add the computer to in the Domain box and click OK
+  - Step 5: If the computer can contact a domain controller, it will prompt you for a username and password, as shown below. Input a user account with permissions to add this computer to the domain and click OK
+  - Step 6: If all goes well, you will receive a message welcoming you to the domain as shown below
 
 ---
 
