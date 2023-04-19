@@ -27,9 +27,9 @@ def vim_customization():
       # Changes the color scheme to `desert`.
       f.write("colorscheme desert\n")
         
-## Function to copy the ```authorized_keys``` to ```.ssh```
+## Function to copy the `authorized_keys` to `.ssh`
 def copy_authorized_keys():
-    # Creates `ssh_dir``` variable which points to the directory `~/.ssh`.
+    # Creates `ssh_dir` variable which points to the directory `~/.ssh`.
     ssh_dir = os.path.expanduser("~/.ssh")
     # Creates the directory.
     os.makedirs(ssh_dir, exist_ok=True)
