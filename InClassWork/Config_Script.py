@@ -17,10 +17,10 @@ def vim_customization():
         
 # Add functionality
     with open(os.path.expanduser("~/.vimrc"), "a") as f:
-       # Link to where I got idea: https://linuxhandbook.com/vim-indentation-tab-spaces/
-       f.write("set noexpandtab\n")
-       f.write("set tabstop=4\n")
-       f.write("set shiftwidth=4\n")
+      # Link to where I got idea: https://linuxhandbook.com/vim-indentation-tab-spaces/
+      f.write("set noexpandtab\n")
+      f.write("set tabstop=4\n")
+      f.write("set shiftwidth=4\n")
        
 # Driver 
 if __name__ == "__main__":
